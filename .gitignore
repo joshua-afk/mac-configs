@@ -8,3 +8,15 @@ Music/
 Pictures/
 Projects/
 Public/
+
+# dotfiles
+.cache/
+.docker/
+.gnupg/
+.ssh/
+
+# config
+.config/karabiner/assets/
+.config/karabiner/automatic_backups/
+.config/nvim-undo/
+.config/thufuck/
