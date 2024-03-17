@@ -1,0 +1,26 @@
+# bsp, stack or float
+yabai -m config layout bsp
+
+yabai -m window_placement second_child
+
+# padding
+yabai -m config top_padding 6
+yabai -m config bottom_padding 6
+yabai -m config left_padding 6
+yabai -m config right_padding 6
+yabai -m config window_gap 6
+
+# mouse
+yabai -m config mouse_follows_focus on
+# yabai -m config focus_follows_mouse autofocus
+yabai -m config mouse_action1 move
+yabai -m config mouse_drop_action swap
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^LinearMouse$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Clock$" manage=off
+yabai -m rule --add app="^Marta$" manage=off
+yabai -m rule --add app="^Camera Preview$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^pgAdmin 4$" manage=off
