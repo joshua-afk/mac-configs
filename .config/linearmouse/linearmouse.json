@@ -1,0 +1,58 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 1.2,
+        "disableAcceleration" : true
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "shift" : false,
+            "control" : true,
+            "command" : false,
+            "action" : "mouse.button.middle",
+            "button" : 0
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productName" : "MX Vertical",
+          "serialNumber" : "BA4320B49B416056",
+          "productID" : "0xb020",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x1969",
+          "category" : "mouse",
+          "vendorID" : "0x3297",
+          "productName" : "Moonlander Mark I"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ]
+}
