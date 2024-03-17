@@ -9,18 +9,33 @@ Pictures/
 Projects/
 Public/
 
+# files
+tmux-*
+
 # dotfiles
+.CFUserTextEncoding
+.DS_Store
 .cache/
 .docker/
 .gnupg/
+.node_repl_history
+.npmrc
+.psql_history
+.python_history
 .ssh/
-.ssh/
+.vim-bookmarks
+.viminfo
+.wget-hsts
+.yarnrc
 .zcompdump*
 .zsh_history
 .zsh_sessions/
+.vim/
+.vscode/
 
 # config
 .config/karabiner/assets/
 .config/karabiner/automatic_backups/
 .config/nvim-undo/
 .config/thufuck/
+.config/.DS_Store
