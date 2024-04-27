@@ -2,15 +2,30 @@
 
 export WHITE=0xffffffff
 
+# -- Catppuccin Scheme --
+export TEXT=0xffcdd6f4
+export ITEM_BG_COLOR=0xff181825
+export BORDER_COLOR=0xffa6adc8
+
+export BLUE=0xff89b4fa
+export GREEN=0xffa6e3a1
+export MAUVE=0xffcba6f7
+export RED=0xfff38ba8
+export YELLOW=0xfff9e2af
+
+export BAR_COLOR=0xffcdd6f4
+export ACCENT_COLOR=0xff181825
+export INACTIVE=0xff585b70
+
 # -- Teal Scheme --
 # export BAR_COLOR=0xff001f30
 # export ITEM_BG_COLOR=0xff003547
 # export ACCENT_COLOR=0xff2cf9ed
 
 # -- Gray Scheme --
-export BAR_COLOR=0xff101314
-export ITEM_BG_COLOR=0xff353c3f
-export ACCENT_COLOR=0xffffffff
+# export BAR_COLOR=0xff101314
+# export ITEM_BG_COLOR=0xff353c3f
+# export ACCENT_COLOR=0xffffffff
 
 # -- Purple Scheme --
 # export BAR_COLOR=0xff140c42

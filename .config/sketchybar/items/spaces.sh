@@ -1,21 +1,26 @@
 #!/bin/bash
 
-SPACE_SIDS=(1 2 3 4 5 6 7 8 9 10)
+SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
+SPACES=()
 
-for sid in "${SPACE_SIDS[@]}"
+for i in "${!SPACE_ICONS[@]}";
 do
-  sketchybar --add space space.$sid left                                 \
-             --set space.$sid space=$sid                                 \
-                              icon=$sid                                  \
+  sid=$(($i + 1))
+  SPACES+=(space.$sid)
+
+  sketchybar --add space space.$sid left  \
+             --set space.$sid space=$sid  \
+                              icon=${SPACE_ICONS[i]}                        \
+                              label.y_offset=-1                             \
+                              label.padding_right=20                        \
                               label.font="sketchybar-app-font:Regular:16.0" \
-                              label.padding_right=20                     \
-                              label.y_offset=-1                          \
+                              background.drawing=on                         \
                               script="$PLUGIN_DIR/space.sh"
 done
 
 sketchybar --add item space_separator left                             \
-           --set space_separator icon="􀆊"                                \
-                                 icon.color=$ACCENT_COLOR \
+           --set space_separator icon="􀆊"                              \
+                                 icon.color="$ACCENT_COLOR"            \
                                  icon.padding_left=4                   \
                                  label.drawing=off                     \
                                  background.drawing=off                \
