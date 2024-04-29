@@ -46,6 +46,7 @@ alias hammerspoon="v ~/.hammerspoon/init.lua"
 alias yabairc="v ~/.config/yabai/yabairc"
 alias skhdrc="v ~/.config/skhd/skhdrc"
 alias tmuxconfig="v ~/.tmux.conf"
+alias sketchybarrc="v ~/.config/sketchybar/sketchybarrc"
 
 # ALIAS: VIM, NVIM
 alias v=nvim
@@ -73,6 +74,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+export FREEDESKTOP_MIME_TYPES_PATH=/usr/local/share/mime/packages/freedesktop.org.xml
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -169,15 +172,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# RBENV
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
-export LDFLAGS="-L/opt/homebrew/opt/readline/lib:$LDFLAGS"
-export optflags="-Wno-error=implicit-function-declaration"
-export LDFLAGS="-L/opt/homebrew/opt/libffi/lib:$LDFLAGS"
-export CPPFLAGS="-I/opt/homebrew/opt/libffi/include:$CPPFLAGS"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
+# RBENV bypass install Ruby for MacBook M1
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+
+eval "$(rbenv init -)"
 
 export GPG_TTY=$(tty)
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
