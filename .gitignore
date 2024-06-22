@@ -21,6 +21,7 @@ tmux-*
 .cache/
 .docker/
 .gem/
+.gitconfig
 .gnupg/
 .hushlogin
 .lesshst
@@ -32,6 +33,7 @@ tmux-*
 .npmrc
 .nvm/
 .pgadmin/
+.oh-my-zsh/
 .profile
 .psql_history
 .pyenv/
@@ -43,6 +45,7 @@ tmux-*
 .vim/
 .viminfo
 .vscode/
+.tmux/
 .wget-hsts
 .yarnrc
 .zcompdump*
@@ -50,9 +53,12 @@ tmux-*
 .zsh_sessions/
 
 # Config
+.config/.DS_Store
+.config/iterm2/
+.config/configstore/
 .config/karabiner/assets/
 .config/karabiner/automatic_backups/
-.config/nvim/
 .config/nvim-undo/
-.config/thufuck/
-.config/.DS_Store
+.config/github-copilot/
+.config/nvim/
+.config/thefuck/
