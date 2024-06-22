@@ -23,11 +23,13 @@ alias lg="lazygit"
 alias diff='git diff'
 alias ga="git add"
 alias gc="git commit"
+alias gcs="git commit -S"
 alias gf="git fetch"
 alias gl="git lol"
-alias gp="git push"
-alias gP="git pull"
+alias gp="git pull"
+alias gP="git push"
 alias gs="git status"
+alias go="git push -u origin HEAD"
 
 # ALIAS: MISC
 alias reload="source ~/.zshrc"
