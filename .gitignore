@@ -16,6 +16,7 @@ tmux-*
 # Dotfiles
 .CFUserTextEncoding
 .DS_Store
+.Trash/
 .bundle
 .cache/
 .docker/
