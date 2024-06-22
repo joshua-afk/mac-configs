@@ -1,0 +1,33 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[debug]
+# render_timer = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+bold = { family = "CaskaydiaCove Nerd Font", style = "Bold" }
+bold_italic = { family = "CaskaydiaCove Nerd Font", style = "Bold Italic" }
+italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
+normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
+size = 17
+
+[scrolling]
+history = 5000
+
+[shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+[window]
+decorations = "Buttonless"
+opacity = 0.95
+padding = { x = 0, y = 0 }
+
+[keyboard]
+bindings = [
+  # { key = "F", mods = "Command|Shift", action = "ReceiveChar" },
+]
