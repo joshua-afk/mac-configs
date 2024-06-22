@@ -77,7 +77,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
+                                            "com.googlecode.iterm2",
+                                            "org.alacritty"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -117,7 +118,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "com.googlecode.iterm2"
+                                            "com.googlecode.iterm2",
+                                            "org.alacritty"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -463,6 +465,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -564,6 +567,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -599,430 +603,6 @@
                         ]
                     },
                     {
-                        "description": "Home",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "home",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Home (Ctrl)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "home",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Home (Shift)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "home",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Home (Ctrl+Shift)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "home",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control",
-                                            "shift"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "End",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "end",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "End (Ctrl)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "end",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "End (Shift)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "end",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "End (Ctrl+Shift)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.parallels\\.desktop\\.console$",
-                                            "^org\\.vmware\\.fusion$",
-                                            "^org\\.gnu\\.emacs$",
-                                            "^org\\.gnu\\.Emacs$",
-                                            "^com\\.jetbrains",
-                                            "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.sublimetext\\.3$",
-                                            "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.citrix\\.XenAppViewer$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^io\\.alacritty$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.github\\.wez\\.wezterm$"
-                                        ],
-                                        "file_paths": [
-                                            "Chrome Remote Desktop\\.app"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "end",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control",
-                                            "shift"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Left Arrow (Ctrl)",
                         "manipulators": [
                             {
@@ -1041,6 +621,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1094,6 +675,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1149,6 +731,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1202,6 +785,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1257,6 +841,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1310,6 +895,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1363,6 +949,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1416,6 +1003,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1453,27 +1041,6 @@
                         ]
                     },
                     {
-                        "description": "Win [Open Spotlight]",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_command"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "apple_vendor_keyboard_key_code": "spotlight"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "A (Ctrl)",
                         "manipulators": [
                             {
@@ -1492,6 +1059,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1545,6 +1113,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1598,6 +1167,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1640,6 +1210,7 @@
                                     {
                                         "bundle_identifiers": [
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1691,6 +1262,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1744,6 +1316,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -1789,6 +1362,7 @@
                                             "^com\\.google\\.Chrome$",
                                             "^org\\.mozilla\\.firefox$",
                                             "^org\\.mozilla\\.nightly$",
+                                            "^org\\.mozilla\\.floorp$",
                                             "^com\\.brave\\.Browser$",
                                             "^com\\.apple\\.Safari$"
                                         ],
@@ -1951,6 +1525,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2004,6 +1579,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2057,6 +1633,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2110,6 +1687,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2163,6 +1741,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2216,6 +1795,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2269,6 +1849,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2322,6 +1903,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2364,6 +1946,7 @@
                                     {
                                         "bundle_identifiers": [
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2415,6 +1998,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2468,6 +2052,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2521,6 +2106,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2574,6 +2160,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2675,6 +2262,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2728,6 +2316,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2779,6 +2368,7 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.microsoft\\.rdc\\.macos$",
                                             "^io\\.alacritty$",
+                                            "^org\\.alacritty$",
                                             "^co\\.zeit\\.hyper$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.apple\\.Terminal$",
@@ -2971,6 +2561,50 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
+                    "identifiers": {
+                        "is_game_pad": false,
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 49291,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "mouse_flip_horizontal_wheel": false,
+                    "mouse_flip_vertical_wheel": false,
+                    "mouse_flip_x": false,
+                    "mouse_flip_y": false,
+                    "mouse_swap_wheels": false,
+                    "mouse_swap_xy": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "game_pad_swap_sticks": false,
+                    "identifiers": {
+                        "is_game_pad": false,
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 49291,
+                        "vendor_id": 1133
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
                     "mouse_flip_horizontal_wheel": false,
                     "mouse_flip_vertical_wheel": false,
                     "mouse_flip_x": false,
