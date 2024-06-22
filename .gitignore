@@ -5,37 +5,46 @@ Downloads/
 Library/
 Movies/
 Music/
+Personal/
 Pictures/
 Projects/
 Public/
 
-# files
+# Files
 tmux-*
 
-# dotfiles
+# Dotfiles
 .CFUserTextEncoding
 .DS_Store
+.bundle
 .cache/
 .docker/
 .gnupg/
 .node_repl_history
+.npm/
 .npmrc
+.nvm/
+.pgadmin/
 .psql_history
+.pyenv/
 .python_history
+.rbenv/
 .ssh/
+.terminfo/
 .vim-bookmarks
+.vim/
 .viminfo
+.vscode/
 .wget-hsts
 .yarnrc
 .zcompdump*
 .zsh_history
 .zsh_sessions/
-.vim/
-.vscode/
 
-# config
+# Config
 .config/karabiner/assets/
 .config/karabiner/automatic_backups/
+.config/nvim/
 .config/nvim-undo/
 .config/thufuck/
 .config/.DS_Store
