@@ -45,6 +45,10 @@
   local cyan='#9AEDFE'
   local white='#F1F1F0'
 
+  # REFERENCE: https://github.com/Powerlevel9k/powerlevel9k/blob/master/README.md#custom_command
+  typeset -g POWERLEVEL9K_CUSTOM_GIT_USER="echo $(git config github.user)"
+  typeset -g POWERLEVEL9K_CUSTOM_GIT_USER_FOREGROUND=$magenta
+
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
@@ -61,6 +65,7 @@
   # Right prompt segments.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
+    custom_git_user
     # command_execution_time  # previous command duration
     # virtualenv              # python virtual environment
     # context                 # user@host
