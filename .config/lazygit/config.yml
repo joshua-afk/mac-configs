@@ -1,0 +1,18 @@
+# Config relating to the Lazygit UI
+gui:
+  # The number of lines you scroll by when scrolling the main window
+  scrollHeight: 2
+
+  # If true, capture mouse events.
+  # When mouse events are captured, it's a little harder to select text: e.g. requiring you to hold the option key when on macOS.
+  mouseEvents: true
+
+# Config relating to git
+git:
+  # If true, do not spawn a separate process when using GPG
+  overrideGpg: false
+
+# Keybindings
+keybinding:
+  universal:
+    quit: q
