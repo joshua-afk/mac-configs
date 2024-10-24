@@ -9,11 +9,50 @@ import = [
 TERM = "xterm-256color"
 
 [font]
-bold = { family = "CaskaydiaCove Nerd Font", style = "Bold" }
-bold_italic = { family = "CaskaydiaCove Nerd Font", style = "Bold Italic" }
-italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
-normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
-size = 17
+size = 14.5
+
+[font.glyph_offset]
+x = 0
+y = 5
+
+[font.offset]
+x = 0
+y = 10
+
+# [font.normal]
+# family = "CaskaydiaCove Nerd Font"
+# style = "Regular"
+#
+# [font.bold]
+# family = "CaskaydiaCove Nerd Font"
+# style = "Bold"
+#
+# [font.bold_italic]
+# family = "CaskaydiaCove Nerd Font"
+# style = "Bold Italic"
+#
+# [font.italic]
+# family = "CaskaydiaCove Nerd Font"
+# style = "Italic"
+
+[font.normal]
+family = "Liga SFMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Liga SFMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "CartographCF Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "CartographCF Nerd Font"
+style = "Regular Italic"
+
+[mouse]
+hide_when_typing = true
 
 [scrolling]
 history = 5000
@@ -24,10 +63,53 @@ args = ["-l"]
 
 [window]
 decorations = "Buttonless"
-opacity = 0.95
-padding = { x = 0, y = 0 }
+opacity = 1
+
+[window.padding]
+x = 0
+y = 0
+
+[colors.normal]
+black = "#313244"
+red = "#F38BA8"
+green = "#A6E3A1"
+yellow = "#F9E2AF"
+blue = "#89B4FA"
+magenta = "#cba6f7"
+cyan = "#94E2D5"
+white = "#bac2de"
+
+[colors.primary]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+dim_foreground = "#CDD6F4"
+bright_foreground = "#CDD6F4"
+
+[colors.cursor]
+text = "#1E1E2E"
+cursor = "#F5E0DC"
+
+[colors.bright]
+black = "#45475a"
+red = "#F38BA8"
+green = "#A6E3A1"
+yellow = "#F9E2AF"
+blue = "#89B4FA"
+magenta = "#cba6f7"
+cyan = "#94E2D5"
+white = "#a6adc8"
+
+[colors.dim]
+black = "#585b70"
+red = "#F38BA8"
+green = "#A6E3A1"
+yellow = "#F9E2AF"
+blue = "#89B4FA"
+magenta = "#cba6f7"
+cyan = "#94E2D5"
+white = "#9399b2"
 
 [keyboard]
 bindings = [
-  { key= "Back", mods= "Control", chars= "\u001b[127;5u" }
+  { key= "Back", mods= "Control", chars= "\u001b[127;5u" },
 ]
