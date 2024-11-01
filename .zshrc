@@ -3,6 +3,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # PATHS
 path+=("/bin")
 path+=("/usr/bin")
@@ -31,6 +33,7 @@ alias go="git push -u origin HEAD"
 alias gp="git push"
 alias gpl="git pull"
 alias gs="git status"
+alias gdev="git checkout development || git checkout dev"
 
 # ALIAS: MISC
 alias reload="source ~/.zshrc"
@@ -39,7 +42,6 @@ alias ll="ls -l --color=auto"
 alias la="ls -a --color=auto"
 alias lla="ll -a --color=auto"
 alias grep="grep -n --color"
-alias alacritty="v ~/.config/alacritty/alacritty.toml"
 alias q="exit"
 
 # CONFIGS
@@ -50,9 +52,40 @@ alias yabairc="v ~/.config/yabai/yabairc"
 alias skhdrc="v ~/.config/skhd/skhdrc"
 alias tmuxconfig="v ~/.tmux.conf"
 alias sketchybarrc="v ~/.config/sketchybar/sketchybarrc"
+alias alacritty="v ~/.config/alacritty/alacritty.toml"
+alias kitty="v ~/.config/kitty/kitty.conf"
 
 # ALIAS: VIM, NVIM
 alias v=nvim
+
+# DOCKER
+alias dup="docker compose up -d"
+alias ddown="docker compose down"
+alias drestart="docker compose down; docker compose up -d"
+alias dbuild="docker compose up --build -d"
+alias dstop="docker stop $(docker ps -q)"
+
+# SCRIPTS
+alias dev="~/scripts/dev.sh"
+
+
+# FUNCTIONS
+# create a separate script for this
+# if container not started `dock` will start the container
+# if container already started `dock` will open container /bin/bash
+dock() {
+  if [ "$1" != "" ]; then
+    if [ "$1" = "core" ]; then
+      docker exec -it "paymongo_api_container" /bin/bash
+    else
+      docker exec -it "$1_container" /bin/bash
+    fi
+  else
+    echo "Error: add docker container as parameter"
+  fi
+}
+
+vs() { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 # PLUGINS
 [ -f $HOMEBREW_PREFIX/etc/profile.d/autojump.sh ] && . $HOMEBREW_PREFIX/etc/profile.d/autojump.sh
@@ -68,6 +101,7 @@ plugins=(git)
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 export FZF_DEFAULT_COMMAND="fd --type f --color never --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -186,11 +220,13 @@ export GPG_TTY=$(tty)
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# # NVM
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source <(fzf --zsh)
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
