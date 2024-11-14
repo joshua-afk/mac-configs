@@ -46,15 +46,15 @@
   local white='#F1F1F0'
 
   # REFERENCE: https://github.com/Powerlevel9k/powerlevel9k/blob/master/README.md#custom_command
-  typeset -g POWERLEVEL9K_CUSTOM_GIT_USER="echo $(git config github.user)"
-  typeset -g POWERLEVEL9K_CUSTOM_GIT_USER_FOREGROUND=$magenta
+  # typeset -g POWERLEVEL9K_CUSTOM_GIT_USER="echo $(git config github.user)"
+  # typeset -g POWERLEVEL9K_CUSTOM_GIT_USER_FOREGROUND=$magenta
 
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     context                   # user@host
     dir                       # current directory
-    vcs                       # git status
+    # vcs                       # git status
     command_execution_time    # previous command duration
     # =========================[ Line #2 ]=========================
     newline                   # \n
@@ -65,7 +65,7 @@
   # Right prompt segments.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    custom_git_user
+    # custom_git_user
     # command_execution_time  # previous command duration
     # virtualenv              # python virtual environment
     # context                 # user@host
@@ -130,31 +130,31 @@
   # indistinguishable from large Git repositories without known state.
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
 
-  # Don't wait for Git status even for a millisecond, so that prompt always updates
-  # asynchronously when Git state changes.
-  typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
-
-  # Cyan ahead/behind arrows.
-  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$cyan
-  # Don't show remote branch, current tag or stashes.
-  typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
-  # Don't show the branch icon.
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
-  # When in detached HEAD state, show @commit where branch normally goes.
-  typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
-  # Don't show staged, unstaged, untracked indicators.
-  typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED}_ICON=
-  # Show '*' when there are staged, unstaged or untracked files.
-  typeset -g POWERLEVEL9K_VCS_DIRTY_ICON='*'
-  # Show '⇣' if local branch is behind remote.
-  typeset -g POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=':⇣'
-  # Show '⇡' if local branch is ahead of remote.
-  typeset -g POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=':⇡'
-  # Don't show the number of commits next to the ahead/behind arrows.
-  typeset -g POWERLEVEL9K_VCS_{COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=1
-  # Remove space between '⇣' and '⇡' and all trailing spaces.
-  typeset -g POWERLEVEL9K_VCS_CONTENT_EXPANSION='${${${P9K_CONTENT/⇣* :⇡/⇣⇡}// }//:/ }'
-
+  # # Don't wait for Git status even for a millisecond, so that prompt always updates
+  # # asynchronously when Git state changes.
+  # typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
+  #
+  # # Cyan ahead/behind arrows.
+  # typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$cyan
+  # # Don't show remote branch, current tag or stashes.
+  # typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
+  # # Don't show the branch icon.
+  # typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
+  # # When in detached HEAD state, show @commit where branch normally goes.
+  # typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
+  # # Don't show staged, unstaged, untracked indicators.
+  # typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED}_ICON=
+  # # Show '*' when there are staged, unstaged or untracked files.
+  # typeset -g POWERLEVEL9K_VCS_DIRTY_ICON='*'
+  # # Show '⇣' if local branch is behind remote.
+  # typeset -g POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=':⇣'
+  # # Show '⇡' if local branch is ahead of remote.
+  # typeset -g POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=':⇡'
+  # # Don't show the number of commits next to the ahead/behind arrows.
+  # typeset -g POWERLEVEL9K_VCS_{COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=1
+  # # Remove space between '⇣' and '⇡' and all trailing spaces.
+  # typeset -g POWERLEVEL9K_VCS_CONTENT_EXPANSION='${${${P9K_CONTENT/⇣* :⇡/⇣⇡}// }//:/ }'
+  
   # Grey current time.
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=$grey
   # Format for the current time: 09:51:02. See `man 3 strftime`.
@@ -183,7 +183,7 @@
   #   - verbose: Enable instant prompt and print a warning when detecting console output during
   #              zsh initialization. Choose this if you've never tried instant prompt, haven't
   #              seen the warning, or if you are unsure what this all means.
-  typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
+  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
   # Hot reload allows you to change POWERLEVEL9K options after Powerlevel10k has been initialized.
   # For example, you can type POWERLEVEL9K_BACKGROUND=red and see your prompt turn red. Hot reload

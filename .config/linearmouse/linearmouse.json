@@ -1,56 +1,57 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
   "schemes" : [
     {
       "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
         "speed" : {
           "vertical" : 0
         },
         "acceleration" : {
           "vertical" : 1
-        },
-        "reverse" : {
-          "vertical" : true
-        }
-      },
-      "if" : {
-        "device" : {
-          "serialNumber" : "BA4320B49B416056",
-          "productName" : "MX Vertical",
-          "productID" : "0xb020",
-          "category" : "mouse",
-          "vendorID" : "0x46d"
         }
       },
       "buttons" : {
         "mappings" : [
           {
-            "action" : "mouse.button.middle",
-            "command" : false,
-            "button" : 0,
-            "control" : true,
             "option" : false,
-            "shift" : false
+            "shift" : false,
+            "button" : 0,
+            "command" : false,
+            "action" : "mouse.button.middle",
+            "control" : true
           }
         ]
       },
+      "if" : {
+        "device" : {
+          "productID" : "0xb020",
+          "productName" : "MX Vertical",
+          "serialNumber" : "BA4320B49B416056",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
       "pointer" : {
-        "disableAcceleration" : true,
-        "acceleration" : 1.2
+        "acceleration" : 1.2,
+        "disableAcceleration" : true
       }
     },
     {
-      "if" : {
-        "device" : {
-          "productName" : "Moonlander Mark I",
-          "productID" : "0x1969",
-          "category" : "mouse",
-          "vendorID" : "0x3297"
-        }
-      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
         }
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Moonlander Mark I",
+          "vendorID" : "0x3297",
+          "productID" : "0x1969",
+          "category" : "mouse"
+        }
       }
     },
     {
@@ -61,29 +62,38 @@
       },
       "if" : {
         "device" : {
-          "vendorID" : "0x46d",
+          "productName" : "USB Receiver",
           "category" : "mouse",
-          "productID" : "0xc539",
-          "productName" : "USB Receiver"
+          "vendorID" : "0x46d",
+          "productID" : "0xc539"
         }
       }
     },
     {
       "if" : {
         "device" : {
+          "serialNumber" : "0665396D3038",
+          "vendorID" : "0x46d",
+          "category" : "mouse",
           "productID" : "0xc08b",
-          "productName" : "G502 HERO Gaming Mouse",
-          "category" : "mouse",
-          "vendorID" : "0x46d",
-          "serialNumber" : "0665396D3038"
+          "productName" : "G502 HERO Gaming Mouse"
         }
       },
       "scrolling" : {
+        "modifiers" : {
+          "vertical" : {
+            "control" : {
+              "type" : "zoom"
+            }
+          }
+        },
         "reverse" : {
           "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 1
         }
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
+  ]
 }

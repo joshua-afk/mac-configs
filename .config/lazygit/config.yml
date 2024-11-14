@@ -10,7 +10,7 @@ gui:
 # Config relating to git
 git:
   # If true, do not spawn a separate process when using GPG
-  overrideGpg: false
+  overrideGpg: true
 
 # Keybindings
 keybinding:
